@@ -15,3 +15,20 @@ def pregunta_12():
     {'A': 177, 'B': 187, 'C': 114, 'D': 136, 'E': 324}
 
     """
+    import csv
+    resultado= {}
+    with open("/Users/sebastiangomezzapata/Universidad/Semestre 2025-II/Fundamentos de Analítica/LAB-01-python-basico-segomezz/files/input/data.csv", "r", encoding="UTF-8") as archivo:
+        reader = csv.reader(archivo, delimiter="\t")
+        for row in reader:
+           clave=row[0]
+           diccionario=row[4].split(",")
+           suma=0
+           for elemento in diccionario:
+                _, valor= elemento.split(":")
+                valor=int(valor)
+                suma+=valor
+           if clave not in resultado:
+                resultado[clave]=suma
+           else:
+                resultado[clave]+=suma
+    return resultado
