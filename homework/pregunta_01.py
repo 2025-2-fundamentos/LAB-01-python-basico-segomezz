@@ -16,7 +16,7 @@ def pregunta_01():
     """
     suma=0
 
-    with open ("/Users/sebastiangomezzapata/Universidad/Semestre 2025-II/Fundamentos de Analítica/LAB-01-python-basico-segomezz/files/input/data.csv","r",encoding="UTF-8") as archivo:
+    with open ("LAB-01-python-basico-segomezz/files/input/data.csv","r",encoding="UTF-8") as archivo:
         reader=csv.reader(archivo, delimiter="\t")
         for row in reader:
             suma+=int(row[1])
