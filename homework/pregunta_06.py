@@ -43,4 +43,3 @@ def pregunta_06():
     return sorted([(clave,min,max) for clave,(min,max) in resultado.items()])
 
 
-print(pregunta_06())

@@ -26,5 +26,3 @@ def pregunta_02():
                     lista[i] = (letra, lista[i][1] + 1)
                     break
     return lista
-
-print(pregunta_02())

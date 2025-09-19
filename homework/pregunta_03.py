@@ -28,4 +28,3 @@ def pregunta_03():
                     break
     return lista
 lista = [("A", 0), ("B", 0), ("C", 0), ("D", 0), ("E", 0)]
-print(pregunta_03())
