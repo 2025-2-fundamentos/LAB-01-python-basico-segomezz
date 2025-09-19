@@ -25,7 +25,7 @@ def pregunta_07():
      (9, ['A', 'B', 'E', 'A', 'A', 'C'])]
 
     """
-    with open ("/Users/sebastiangomezzapata/Universidad/Semestre 2025-II/Fundamentos de Analítica/LAB-01-python-basico-segomezz/files/input/data.csv", "r", encoding="UTF-8") as archivo:
+    with open ("files/input/data.csv", "r", encoding="UTF-8") as archivo:
         reader = csv.reader(archivo, delimiter="\t")
         resultado= {}
         for row in reader:

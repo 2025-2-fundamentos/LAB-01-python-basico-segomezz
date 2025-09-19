@@ -17,7 +17,7 @@ def pregunta_11():
 
     """
     resultado= {}
-    with open("/Users/sebastiangomezzapata/Universidad/Semestre 2025-II/Fundamentos de Analítica/LAB-01-python-basico-segomezz/files/input/data.csv", "r", encoding="UTF-8") as archivo:
+    with open("files/input/data.csv", "r", encoding="UTF-8") as archivo:
         reader = csv.reader(archivo, delimiter="\t")
         for row in reader:
            col2=int(row[1])

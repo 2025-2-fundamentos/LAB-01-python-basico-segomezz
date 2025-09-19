@@ -28,7 +28,7 @@ def pregunta_04():
 
     """
     lista=[("01", 0), ("02", 0), ("03", 0), ("04", 0), ("05", 0), ("06", 0), ("07", 0), ("08", 0), ("09", 0), ("10", 0), ("11", 0), ("12", 0)]
-    with open("/Users/sebastiangomezzapata/Universidad/Semestre 2025-II/Fundamentos de Analítica/LAB-01-python-basico-segomezz/files/input/data.csv", "r", encoding="UTF-8") as archivo:
+    with open("files/input/data.csv", "r", encoding="UTF-8") as archivo:
         reader = csv.reader(archivo, delimiter="\t")
         for row in reader:
             fecha= row[2]
