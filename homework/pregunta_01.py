@@ -5,7 +5,7 @@ solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
 
-
+import csv
 def pregunta_01():
     """
     Retorne la suma de la segunda columna.
@@ -14,3 +14,10 @@ def pregunta_01():
     214
 
     """
+    suma=0
+
+    with open ("files/input/data.csv","r",encoding="UTF-8") as archivo:
+        reader=csv.reader(archivo, delimiter="\t")
+        for row in reader:
+            suma+=int(row[1])
+    return suma

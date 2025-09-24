@@ -27,3 +27,19 @@ def pregunta_08():
      (9, ['A', 'B', 'C', 'E'])]
 
     """
+    import csv
+    with open ("files/input/data.csv", "r", encoding="UTF-8") as archivo:
+        reader = csv.reader(archivo, delimiter="\t")
+        resultado= {}
+        for row in reader:
+            clave=int(row[1])
+            valor=row[0]
+            if clave not in resultado:
+                
+                 resultado[clave]=[valor]
+            else:
+                if valor not in resultado[clave]:
+                    resultado[clave].append(valor)
+
+    return sorted([(clave, sorted(letras)) for clave, letras in resultado.items()])
+

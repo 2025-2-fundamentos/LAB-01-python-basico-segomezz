@@ -5,7 +5,7 @@ solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
 
-
+import csv 
 def pregunta_07():
     """
     Retorne una lista de tuplas que asocien las columnas 0 y 1. Cada tupla
@@ -25,3 +25,17 @@ def pregunta_07():
      (9, ['A', 'B', 'E', 'A', 'A', 'C'])]
 
     """
+    with open ("files/input/data.csv", "r", encoding="UTF-8") as archivo:
+        reader = csv.reader(archivo, delimiter="\t")
+        resultado= {}
+        for row in reader:
+            clave=int(row[1])
+            valor=row[0]
+            if clave not in resultado:
+                resultado[clave]=[valor]
+            else:
+                resultado[clave].append(valor)
+
+    return sorted([(clave, letras) for clave, letras in resultado.items()])
+
+            

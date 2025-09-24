@@ -5,6 +5,7 @@ solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
 
+import csv
 
 def pregunta_04():
     """
@@ -26,3 +27,15 @@ def pregunta_04():
      ('12', 3)]
 
     """
+    lista=[("01", 0), ("02", 0), ("03", 0), ("04", 0), ("05", 0), ("06", 0), ("07", 0), ("08", 0), ("09", 0), ("10", 0), ("11", 0), ("12", 0)]
+    with open("files/input/data.csv", "r", encoding="UTF-8") as archivo:
+        reader = csv.reader(archivo, delimiter="\t")
+        for row in reader:
+            fecha= row[2]
+            mes=fecha[5:7]
+            for i in range(len(lista)):
+                if lista[i][0]==mes:
+                    lista[i]=(mes, lista[i][1]+1)
+                    break
+    return lista
+            
